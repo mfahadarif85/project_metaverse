@@ -5,6 +5,9 @@ import Image from "next/image";
 import styles from "../styles";
 import { navVariants } from "../utils/motion";
 
+import search from "../public/search.svg";
+import menu from "../public/menu.svg";
+
 const Navbar = () => (
   <motion.nav
     variants={navVariants}
@@ -15,21 +18,17 @@ const Navbar = () => (
     <div className='absolute w-[50%] inset-0 gradient-01' />
     <div className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}>
       <Image
-        src='/search.svg'
+        src={search}
         alt='search'
-        width={24}
-        height={24}
-        className='w-auto h-auto object-contain'
+        className='w-[24px] h-[24px] object-contain'
       />
       <h2 className='font-extrabold text-[24px] leading-[30px] text-white'>
         METAVERSUS
       </h2>
       <Image
-        src='/menu.svg'
+        src={menu}
         alt='menu'
-        width={24}
-        height={24}
-        className='w-auto h-auto object-contain'
+        className='w-[24px] h-[24px] object-contain'
       />
     </div>
   </motion.nav>
